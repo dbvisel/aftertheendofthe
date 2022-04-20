@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import matter from "gray-matter";
 import md from "markdown-it";
-import styles from "./Post.module.css";
+import styles from "./Photo.module.css";
 
 export async function getStaticPaths() {
   const files = fs.readdirSync("posts");
@@ -69,12 +69,12 @@ export default function PostPage({ metadata, content, next, prev }) {
       <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
       <nav>
         {prev ? (
-          <Link href={`/post/${prev}`}>
+          <Link href={`/photo/${prev}`}>
             <a style={{ marginRight: "auto" }}>{prev} ←</a>
           </Link>
         ) : null}
         {next ? (
-          <Link href={`/post/${next}`}>
+          <Link href={`/photo/${next}`}>
             <a style={{ marginLeft: "auto" }}>→ {next}</a>
           </Link>
         ) : null}

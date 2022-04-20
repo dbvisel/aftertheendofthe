@@ -30,7 +30,7 @@ export default function Home({ posts }) {
       <ul>
         {posts.map((post, index) => (
           <li key={index}>
-            <Link href={`/post/${post.slug}`}>
+            <Link href={`/photo/${post.slug}`}>
               <a>
                 <Image
                   src={`/images/${post.frontmatter.title}`}
