@@ -7,6 +7,7 @@
 	margin: 0 0 var(--outsidePadding) 0;
 	background-color: var(--white);
 	padding: var(--insidePadding);
+	border-radius: 3px;
 }
 
 .post figcaption {
@@ -16,5 +17,14 @@
 	font-family: var(--headerFont);
 	font-style: italic;
 	font-size: 24px;
+}
 
+.post p {
+	margin: 0;
+	font-size: 21px;
+	line-height: 36px;
+}
+
+.post p + p {
+	text-indent: 36px;
 }

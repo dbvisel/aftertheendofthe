@@ -1,6 +1,8 @@
 import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
+import Image from "next/image";
+import styles from "./index.module.css";
 
 export async function getStaticProps() {
   const files = fs.readdirSync("posts");
@@ -21,15 +23,24 @@ export async function getStaticProps() {
   };
 }
 
-// TODO: make this a card grid of just images?
-
 export default function Home({ posts }) {
+  // console.log(posts);
   return (
-    <div>
+    <div className={styles.indexgrid}>
       <ul>
         {posts.map((post, index) => (
           <li key={index}>
-            <Link href={`/post/${post.slug}`}>{post.frontmatter.title}</Link>
+            <Link href={`/post/${post.slug}`}>
+              <a>
+                <Image
+                  src={post.frontmatter.src}
+                  alt={post.frontmatter.title}
+                  width={256}
+                  height={256}
+                  objectFit={"cover"}
+                />
+              </a>
+            </Link>
           </li>
         ))}
       </ul>
