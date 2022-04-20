@@ -9,7 +9,7 @@ export default function Header({ title }) {
           <Link href="/">
             <a>After the end of the</a>
           </Link>
-          {title ? `: ${title}` : null}
+          {title ? `: ${title}` : "world"}
         </h1>
       </div>
     </header>
