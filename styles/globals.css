@@ -1,13 +1,104 @@
+:root {
+	--mainFont: "Novela", serif;
+	--headerFont: "Geomanist", sans-serif;
+	--background: rgb(183, 183, 186);
+	--linkColor: navy;
+}
+
+@font-face {
+	font-family: 'Novela';
+	src: url('../fonts/novela-bold-webfont.woff2') format('woff2'),
+			 url('../fonts/novela-bold-webfont.woff') format('woff'),
+			 url('../fonts/novela-bold-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Novela';
+	src: url('../fonts/novela-bolditalic-webfont.woff2') format('woff2'),
+			 url('../fonts/novela-bolditalic-webfont.woff') format('woff'),
+			 url('../fonts/novela-bolditalic-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Novela';
+	src: url('../fonts/novela-regular-webfont.woff2') format('woff2'),
+			 url('../fonts/novela-regular-webfont.woff') format('woff'),
+			 url('../fonts/novela-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Novela';
+	src: url('../fonts/novela-regularitalic-webfont.woff2') format('woff2'),
+			 url('../fonts/novela-regularitalic-webfont.woff') format('woff'),
+			 url('../fonts/novela-regularitalic-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geomanist';
+	src: url('../fonts/geomanist-regular-webfont.woff2') format('woff2'),
+			 url('../fonts/geomanist-regular-webfont.woff') format('woff'),
+			 url('../fonts/geomanist-regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geomanist';
+	src: url('../fonts/geomanist-regular-italic-webfont.woff2') format('woff2'),
+			 url('../fonts/geomanist-regular-italic-webfont.woff') format('woff'),
+			 url('../fonts/geomanist-regular-italic-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Geomanist';
+	src: url('../fonts/geomanist-medium-webfont.woff2') format('woff2'),
+			 url('../fonts/geomanist-medium-webfont.woff') format('woff'),
+			 url('../fonts/geomanist-medium-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geomanist';
+	src: url('../fonts/geomanist-medium-italic-webfont.woff2') format('woff2'),
+			 url('../fonts/geomanist-medium-italic-webfont.woff') format('woff'),
+			 url('../fonts/geomanist-medium-italic-webfont.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+  font-family: var(--mainFont), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	background-color: var(--background);
 }
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--headerFont);
+}
+
+a { 
+	color: var(--linkColor); 
+	font-family: var(--headerFont);
+	font-weight: bold;
 }
 
 main {
@@ -17,13 +108,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
 }
 
 .container {
