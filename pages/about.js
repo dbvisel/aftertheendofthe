@@ -1,4 +1,4 @@
-import styles from "./post/pppost.module.css";
+import styles from "./post/Post.module.css";
 
 export async function getStaticProps() {
   const title = "About this project";

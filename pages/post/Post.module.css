@@ -1,0 +1,53 @@
+.post {
+	width: 100%;
+	max-width: 800px;
+	padding-bottom: var(--outsidePadding);
+}
+
+.post figure {
+	margin: 0 0 var(--outsidePadding) 0;
+	background-color: var(--white);
+	padding: var(--insidePadding);
+	border-radius: 3px;
+}
+
+.post figcaption {
+	text-align: center;
+	padding: var(--insidePadding);
+	padding-bottom: 4px;
+	font-family: var(--headerFont);
+	font-style: italic;
+	font-size: 24px;
+}
+
+.post p {
+	margin: 0;
+	font-size: 21px;
+	line-height: 39px;
+}
+
+.post p + p {
+	text-indent: 36px;
+}
+
+.post nav {
+	margin-top: calc(2 * var(--outsidePadding));
+	display: flex;
+	justify-content: space-between;
+}
+
+.post nav a {
+	background-color: var(--borderColor);
+	user-select: none;
+	color: var(--white);
+	letter-spacing: 0.1em;
+	font-size: 21px;
+	padding: 2px var(--insidePadding);
+	border-radius: 21px;
+	transition: 0.5s;
+}
+
+.post nav a:hover {
+	text-decoration: none;
+	background-color: var(--linkColor);
+}

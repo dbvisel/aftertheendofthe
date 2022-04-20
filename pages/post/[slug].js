@@ -1,12 +1,13 @@
 import fs from "fs";
 import Image from "next/image";
+import Link from "next/link";
 import matter from "gray-matter";
 import md from "markdown-it";
-import styles from "./pppost.module.css";
+import styles from "./Post.module.css";
 
 export async function getStaticPaths() {
   const files = fs.readdirSync("posts");
-  const paths = files.map((fileName) => ({
+  const paths = files.map((fileName, index) => ({
     params: {
       slug: fileName.replace(".md", ""),
     },
@@ -17,7 +18,12 @@ export async function getStaticPaths() {
   };
 }
 
+// TODO:
+
 export async function getStaticProps({ params: { slug } }) {
+  const files = fs.readdirSync("posts");
+  const myPosition = files.indexOf(`${slug}.md`);
+
   const fileName = fs.readFileSync(`posts/${slug}.md`, "utf-8");
   const { data: frontmatter, content } = matter(fileName);
   const title = frontmatter.title;
@@ -39,11 +45,16 @@ export async function getStaticProps({ params: { slug } }) {
       metadata: frontmatter,
       content,
       title,
+      next:
+        myPosition < files.length - 1
+          ? files[myPosition + 1].replace(".md", "")
+          : null,
+      prev: myPosition > 0 ? files[myPosition - 1].replace(".md", "") : null,
     },
   };
 }
 
-export default function PostPage({ metadata, content }) {
+export default function PostPage({ metadata, content, next, prev }) {
   return (
     <div className={styles.post}>
       <figure>
@@ -56,6 +67,18 @@ export default function PostPage({ metadata, content }) {
         <figcaption>{metadata.jsDate}</figcaption>
       </figure>
       <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+      <nav>
+        {prev ? (
+          <Link href={`/post/${prev}`}>
+            <a style={{ marginRight: "auto" }}>{prev} ←</a>
+          </Link>
+        ) : null}
+        {next ? (
+          <Link href={`/post/${next}`}>
+            <a style={{ marginLeft: "auto" }}>→ {next}</a>
+          </Link>
+        ) : null}
+      </nav>
     </div>
   );
 }
