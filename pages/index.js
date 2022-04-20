@@ -24,7 +24,7 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }) {
-  // console.log(posts);
+  console.log(posts);
   return (
     <div className={styles.indexgrid}>
       <ul>
@@ -33,7 +33,7 @@ export default function Home({ posts }) {
             <Link href={`/post/${post.slug}`}>
               <a>
                 <Image
-                  src={post.frontmatter.src}
+                  src={`/images/${post.frontmatter.title}`}
                   alt={post.frontmatter.title}
                   width={256}
                   height={256}
