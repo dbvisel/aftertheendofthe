@@ -2,7 +2,7 @@ import fs from "fs";
 import Image from "next/image";
 import matter from "gray-matter";
 import md from "markdown-it";
-import styles from "./Post.module.css";
+import styles from "./pppost.module.css";
 
 export async function getStaticPaths() {
   const files = fs.readdirSync("posts");
