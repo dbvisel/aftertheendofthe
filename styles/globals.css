@@ -1,8 +1,15 @@
 :root {
 	--mainFont: "Novela", serif;
 	--headerFont: "Geomanist", sans-serif;
-	--background: rgb(183, 183, 186);
+	--backgroundColor: rgb(183, 183, 186);
 	--linkColor: navy;
+	--borderColor:rgb(125, 126, 159);
+	--black: #333;
+	--white: #eee;
+	--headerHeight: 100px;
+	--footerHeight: 50px;
+	--outsidePadding: 32px;
+	--insidePadding: 16px;
 }
 
 @font-face {
@@ -84,7 +91,8 @@ body {
   margin: 0;
   font-family: var(--mainFont), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	background-color: var(--background);
+	background-color: var(--borderColor);
+	color: var(--black);
 }
 
 * {
@@ -99,10 +107,16 @@ a {
 	color: var(--linkColor); 
 	font-family: var(--headerFont);
 	font-weight: bold;
+	text-decoration: none;
+	transition: 0.25s;
+}
+
+a:hover {
+	text-decoration: underline;
 }
 
 main {
-  padding: 5rem 0;
+  padding: var(--outsidePadding);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -110,10 +124,6 @@ main {
   align-items: center;
 }
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.wrapper {
+	background-color: var(--backgroundColor);
 }
