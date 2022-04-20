@@ -2,6 +2,6 @@
 
 ## TODO:
 
- - figure out a smart way to do markdown
- - images
+ - metadata?
+ - sequencing?
  - fonts/styling
