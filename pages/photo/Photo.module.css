@@ -2,6 +2,15 @@
 	width: 100%;
 	max-width: 800px;
 	padding-bottom: var(--outsidePadding);
+	--fontSize: 21px;
+	--lineHeight: 39px;
+}
+
+@media (max-width: 767px) {
+	.post {
+		--fontSize: 18px;
+		--lineHeight: 36px;
+	}
 }
 
 .post figure {
@@ -17,17 +26,17 @@
 	padding-bottom: 4px;
 	font-family: var(--headerFont);
 	font-style: italic;
-	font-size: 24px;
+	font-size: var(--fontSize);
 }
 
 .post p {
 	margin: 0;
-	font-size: 21px;
-	line-height: 39px;
+	font-size: var(--fontSize);
+	line-height: var(--lineHeight);
 }
 
 .post p + p {
-	text-indent: 36px;
+	text-indent: var(--lineHeight);
 }
 
 .post nav {

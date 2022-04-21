@@ -1,10 +1,9 @@
 import styles from "./photo/Photo.module.css";
 
 export async function getStaticProps() {
-  const title = "About this project";
   return {
     props: {
-      title,
+      title: "about this project",
     },
   };
 }

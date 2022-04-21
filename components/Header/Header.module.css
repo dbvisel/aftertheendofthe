@@ -5,7 +5,15 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	user-select: none;
 }
+
+@media (max-width: 768px) {
+	.header {
+		--headerHeight: initial;
+	}
+}
+
 
 .header h1 {
 	font-weight: normal;
