@@ -37,8 +37,8 @@ export default function Home({ posts }) {
                 <Image
                   src={`/images/${post.frontmatter.title}`}
                   alt={post.frontmatter.title}
-                  width={256}
-                  height={256}
+                  width={512}
+                  height={512}
                   objectFit={"cover"}
                 />
               </a>
