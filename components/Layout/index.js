@@ -4,7 +4,7 @@ import Footer from "@components/Footer";
 import Header from "@components/Header";
 
 export default function Layout({ children, title, slug }) {
-  console.log(slug);
+  // console.log(slug);
   return (
     <div className="wrapper">
       <Head>
