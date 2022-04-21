@@ -45,6 +45,7 @@ export async function getStaticProps({ params: { slug } }) {
       metadata: frontmatter,
       content,
       title,
+      slug: `photo/${slug}/`,
       next:
         myPosition < files.length - 1
           ? files[myPosition + 1].replace(".md", "")

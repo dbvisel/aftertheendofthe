@@ -18,6 +18,8 @@ export async function getStaticProps() {
   });
   return {
     props: {
+      title: "",
+      slug: "",
       posts,
     },
   };

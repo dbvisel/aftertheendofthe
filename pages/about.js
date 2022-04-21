@@ -4,6 +4,7 @@ export async function getStaticProps() {
   return {
     props: {
       title: "about this project",
+      slug: "about",
     },
   };
 }
