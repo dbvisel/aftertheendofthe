@@ -12,6 +12,10 @@
 	font-family: var(--headerFont);
 }
 
+.footer p {
+	letter-spacing: 0.5px;
+}
+
 .footer a {
 	color: var(--white);
 }

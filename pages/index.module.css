@@ -20,5 +20,13 @@
 	padding: 0;
 	font-size: 0px;
 	line-height: 0;
+	transition: 0.5s;
+	border: 10px solid transparent;
+	border-radius: 2px;
+}
+
+.indexgrid li:hover {
+	transform: rotate(3deg);
+	border-color: var(--white);
 }
 

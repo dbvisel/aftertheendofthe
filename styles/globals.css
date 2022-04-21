@@ -3,7 +3,9 @@
 	--headerFont: "Geomanist", sans-serif;
 	--backgroundColor: rgb(183, 183, 186);
 	--linkColor: navy;
+	--linkColor: rgb(103, 135, 141);
 	--borderColor:rgb(125, 126, 159);
+	--borderColor: rgb(103, 135, 141);
 	--black: #333;
 	--white: #eee;
 	--headerHeight: 100px;
