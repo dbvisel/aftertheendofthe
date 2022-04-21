@@ -9,7 +9,7 @@ export default function Layout({ children, title, slug }) {
     <div className="wrapper">
       <Head>
         <title>After the end of the {title}</title>
-        <meta name="description" value="A project by Dan Visel" />
+        <meta name="description" content="A project by Dan Visel" />
         <link rel="canonical" href={`https://aftertheendofthe.world/${slug}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
