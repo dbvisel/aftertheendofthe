@@ -34,19 +34,23 @@
 }
 
 @media (min-width: 768px) {
+
+	.post > div p:first-child:first-line {
+		text-transform: uppercase;
+		font-variant: small-caps; /* for safari */
+		letter-spacing: 3px;
+	}
 	.post > div p:first-child:first-letter {
 		float: left;
 		font-size: calc(var(--fontSize) * 3.9);
 		line-height: 60px;
 		padding-top: 8px;
 		padding-right:2px;
+		font-variant: normal;
 	}
 
-	.post > div p:first-child:first-line {
-		text-transform: uppercase;
-		letter-spacing: 3px;
-	}
-	}
+
+}
 .post p {
 	margin: 0;
 	font-size: var(--fontSize);
