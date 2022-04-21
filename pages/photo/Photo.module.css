@@ -20,6 +20,10 @@
 	border-radius: 3px;
 }
 
+.post figure img {
+	border-radius: 3px;
+}
+
 .post figcaption {
 	text-align: center;
 	padding: var(--insidePadding);
@@ -29,6 +33,20 @@
 	font-size: var(--fontSize);
 }
 
+@media (min-width: 768px) {
+	.post > div p:first-child:first-letter {
+		float: left;
+		font-size: calc(var(--fontSize) * 3.9);
+		line-height: 60px;
+		padding-top: 8px;
+		padding-right:2px;
+	}
+
+	.post > div p:first-child:first-line {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+	}
+	}
 .post p {
 	margin: 0;
 	font-size: var(--fontSize);

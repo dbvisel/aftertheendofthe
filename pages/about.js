@@ -14,7 +14,7 @@ export default function AboutPage() {
     <div className={styles.post}>
       <div>
         <p>
-          The project takes as its source a collection of images from a trip to
+          This project takes as its source a collection of images from a trip to
           Libya in early 2011, taken on a phone and a digital camera. They are
           not, or should be said from the start, very good photos. In part this
           is because of the time that they're from, when storage was suddenly

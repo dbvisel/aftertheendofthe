@@ -134,4 +134,5 @@ main {
 
 .wrapper {
 	background-color: var(--backgroundColor);
+	border: 6px solid var(--borderColor);
 }

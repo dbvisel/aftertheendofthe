@@ -12,6 +12,7 @@
 	grid-gap: var(--gridGap);
 	grid-auto-flow: dense;
 	grid-template-columns: repeat(auto-fill, minmax( var(--cellWidth),  var(--cellWidth)));
+	justify-content: center;
 }
 
 .indexgrid li {
@@ -21,12 +22,14 @@
 	font-size: 0px;
 	line-height: 0;
 	transition: 0.5s;
-	border: 10px solid transparent;
+	/* border: 10px solid transparent; */
 	border-radius: 2px;
+	user-select: none;
 }
 
 .indexgrid li:hover {
-	transform: rotate(3deg);
-	border-color: var(--white);
+	transform: rotate(2deg);
+	box-shadow: 6px 6px 0 rgba(103,135,141,1);
+	/* border-color: var(--white); */
 }
 
