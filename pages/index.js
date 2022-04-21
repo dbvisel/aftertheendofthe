@@ -6,7 +6,14 @@ import styles from "./index.module.css";
 
 export async function getStaticProps() {
   const files = fs.readdirSync("posts");
-  const posts = files.map((fileName) => {
+  const sortedFiles = files.sort((a, b) => {
+    const x = parseInt(a.replace(".md", ""), 10);
+    const y = parseInt(b.replace(".md", ""), 10);
+    if (x > y) return 1;
+    if (y > x) return -1;
+    return 0;
+  });
+  const posts = sortedFiles.map((fileName) => {
     const slug = fileName.replace(".md", "");
     const readFile = fs.readFileSync(`posts/${fileName}`, "utf-8");
     const { data: frontmatter } = matter(readFile);
