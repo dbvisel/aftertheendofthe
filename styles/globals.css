@@ -1,7 +1,7 @@
 :root {
 	--mainFont: "Novela", serif;
-	--headerFont: "Geomanist", sans-serif;
-	--backgroundColor: rgb(183, 183, 186);
+	--headerFont: "Silka", sans-serif;
+	--backgroundColor: rgb(228, 230, 231); /* rgb(183, 183, 186); */
 	--linkColor: navy;
 	--linkColor: rgb(103, 135, 141);
 	--borderColor:rgb(125, 126, 159);
@@ -57,37 +57,37 @@
 }
 
 @font-face {
-	font-family: 'Geomanist';
-	src: url('../fonts/geomanist-regular-webfont.woff2') format('woff2'),
-			 url('../fonts/geomanist-regular-webfont.woff') format('woff'),
-			 url('../fonts/geomanist-regular-webfont.ttf') format('truetype');
+	font-family: 'Silka';
+	src: url('../fonts/silka-regular-webfont.woff2') format('woff2'),
+			 url('../fonts/silka-regular-webfont.woff') format('woff'),
+			 url('../fonts/silka-regular-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Geomanist';
-	src: url('../fonts/geomanist-regular-italic-webfont.woff2') format('woff2'),
-			 url('../fonts/geomanist-regular-italic-webfont.woff') format('woff'),
-			 url('../fonts/geomanist-regular-italic-webfont.ttf') format('truetype');
+	font-family: 'Silka';
+	src: url('../fonts/silka-regularitalic-webfont.woff2') format('woff2'),
+			 url('../fonts/silka-regularitalic-webfont.woff') format('woff'),
+			 url('../fonts/silka-regularitalic-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
-	font-family: 'Geomanist';
-	src: url('../fonts/geomanist-medium-webfont.woff2') format('woff2'),
-			 url('../fonts/geomanist-medium-webfont.woff') format('woff'),
-			 url('../fonts/geomanist-medium-webfont.ttf') format('truetype');
+	font-family: 'Silka';
+	src: url('../fonts/silka-bold-webfont.woff2') format('woff2'),
+			 url('../fonts/silka-bold-webfont.woff') format('woff'),
+			 url('../fonts/silka-bold-webfont.ttf') format('truetype');
 	font-weight: bold;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Geomanist';
-	src: url('../fonts/geomanist-medium-italic-webfont.woff2') format('woff2'),
-			 url('../fonts/geomanist-medium-italic-webfont.woff') format('woff'),
-			 url('../fonts/geomanist-medium-italic-webfont.ttf') format('truetype');
+	font-family: 'Silka';
+	src: url('../fonts/silka-bolditalic-webfont.woff2') format('woff2'),
+			 url('../fonts/silka-bolditalic-webfont.woff') format('woff'),
+			 url('../fonts/silka-bolditalic-webfont.ttf') format('truetype');
 	font-weight: bold;
 	font-style: italic;
 }
